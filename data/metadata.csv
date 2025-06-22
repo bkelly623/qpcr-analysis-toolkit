@@ -1,0 +1,4 @@
+Gene,Gene_Type,Full_Name,Function
+GAPDH,Reference,Glyceraldehyde-3-phosphate dehydrogenase,Housekeeping gene for normalization
+IL6,Target,Interleukin 6,Pro-inflammatory cytokine
+TNF,Target,Tumor Necrosis Factor Alpha,Pro-inflammatory cytokine
