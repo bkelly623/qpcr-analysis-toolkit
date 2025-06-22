@@ -81,6 +81,7 @@ pip install -r requirements.txt
 from src.qpcr_analyzer import qPCRAnalyzer
 from src.statistical_analysis import qPCRStatistics
 from src.visualization import qPCRVisualizer
+from src.report_generator import qPCRReportGenerator
 
 # Complete analysis pipeline
 analyzer = qPCRAnalyzer(reference_gene='GAPDH', control_condition='Control')
@@ -93,6 +94,10 @@ stats_results = stats_analyzer.perform_comprehensive_analysis(qpcr_results['delt
 # Publication-ready plots
 visualizer = qPCRVisualizer()
 figures = visualizer.create_comprehensive_report(qpcr_results, stats_results)
+
+# Automated reporting
+reporter = qPCRReportGenerator()
+reports = reporter.generate_complete_report_package(qpcr_results, stats_results)
 
 # View results
 print(stats_results['ttest_results'])
@@ -112,6 +117,7 @@ qpcr-analysis-toolkit/
 │   ├── qpcr_analyzer.py        # Core analysis engine
 │   ├── statistical_analysis.py # Statistical testing
 │   ├── visualization.py        # Plotting functions
+│   ├── report_generator.py     # Automated reporting
 │   └── utils.py                # Utility functions
 ├── examples/                # Usage examples
 │   └── basic_analysis.py       # Getting started guide
@@ -155,14 +161,15 @@ This toolkit implements the gold-standard ΔΔCt method for relative quantificat
 - **Effect Size Analysis**: Cohen's d with biological interpretation
 - **Publication Plots**: Bar charts, box plots, heatmaps, QC dashboards
 - **Quality Control**: Data validation, outlier detection, replicate analysis
-- **Comprehensive Reporting**: Integrated analysis with statistical validation
-- **Professional Documentation**: Full API reference and methodology explanations
+- **Automated Reporting**: HTML summaries, Excel exports, JSON data files
+- **Professional Documentation**: User guide, examples, troubleshooting
+- **Complete Integration**: End-to-end pipeline from raw data to publication
 
-### 🔄 Enhanced Features (In Development)
-- **Automated PDF Reports**: Executive summaries with embedded plots
-- **Excel Export**: Processed data with statistical annotations
-- **Jupyter Tutorials**: Step-by-step analysis notebooks
+### 🔄 Enhanced Features (Future Development)
+- **Jupyter Tutorials**: Interactive step-by-step analysis notebooks
 - **Batch Processing**: Multi-experiment comparative analysis
+- **Advanced Visualizations**: Volcano plots, pathway analysis
+- **Web Interface**: Streamlit dashboard for non-programmers
 
 ## 🧪 Sample Data Format
 
@@ -188,11 +195,16 @@ S002,IL6,Treatment,1,1,25.23,D3
 
 ### Running Tests
 ```bash
-# Run the basic functionality test
-python test_analyzer.py
+# Run the complete toolkit demonstration
+python test_complete_toolkit.py
 
-# Run full test suite (when implemented)
-pytest tests/
+# Run individual module tests
+python test_analyzer.py
+python test_statistics.py
+python test_complete_pipeline.py
+
+# Run the example analysis
+python examples/basic_analysis.py
 ```
 
 ### Virtual Environment Management
