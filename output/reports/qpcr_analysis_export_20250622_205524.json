@@ -1,0 +1,188 @@
+{
+  "metadata": {
+    "analysis_date": "2025-06-22T20:55:24.186396",
+    "toolkit_version": "1.0.0",
+    "analysis_type": "qPCR_ddCt_analysis"
+  },
+  "experimental_design": {
+    "total_samples": 6,
+    "target_genes": [
+      "IL6",
+      "TNF"
+    ],
+    "conditions": [
+      "Control",
+      "Treatment"
+    ],
+    "biological_replicates": 6
+  },
+  "statistical_summary": {
+    "total_comparisons": 2,
+    "significant_uncorrected": "2",
+    "significant_bonferroni": "2",
+    "significant_fdr": "2",
+    "alpha_level": 0.05
+  },
+  "fold_changes": [
+    {
+      "Sample_ID": "S001",
+      "Condition": "Control",
+      "Biological_Rep": 1,
+      "Target_Gene": "IL6",
+      "Delta_Ct": 9.89,
+      "Control_Mean_Delta_Ct": 10.3,
+      "Delta_Delta_Ct": -0.41000000000000014,
+      "Fold_Change": 1.3286858140965117
+    },
+    {
+      "Sample_ID": "S002",
+      "Condition": "Control",
+      "Biological_Rep": 2,
+      "Target_Gene": "IL6",
+      "Delta_Ct": 10.265,
+      "Control_Mean_Delta_Ct": 10.3,
+      "Delta_Delta_Ct": -0.03500000000000014,
+      "Fold_Change": 1.0245568230328015
+    },
+    {
+      "Sample_ID": "S003",
+      "Condition": "Control",
+      "Biological_Rep": 3,
+      "Target_Gene": "IL6",
+      "Delta_Ct": 10.745000000000001,
+      "Control_Mean_Delta_Ct": 10.3,
+      "Delta_Delta_Ct": 0.4450000000000003,
+      "Fold_Change": 0.7345843166391544
+    },
+    {
+      "Sample_ID": "S004",
+      "Condition": "Treatment",
+      "Biological_Rep": 1,
+      "Target_Gene": "IL6",
+      "Delta_Ct": 6.459999999999997,
+      "Control_Mean_Delta_Ct": 10.3,
+      "Delta_Delta_Ct": -3.8400000000000034,
+      "Fold_Change": 14.320401134847593
+    },
+    {
+      "Sample_ID": "S005",
+      "Condition": "Treatment",
+      "Biological_Rep": 2,
+      "Target_Gene": "IL6",
+      "Delta_Ct": 6.030000000000001,
+      "Control_Mean_Delta_Ct": 10.3,
+      "Delta_Delta_Ct": -4.27,
+      "Fold_Change": 19.29292524305216
+    },
+    {
+      "Sample_ID": "S006",
+      "Condition": "Treatment",
+      "Biological_Rep": 3,
+      "Target_Gene": "IL6",
+      "Delta_Ct": 6.824999999999999,
+      "Control_Mean_Delta_Ct": 10.3,
+      "Delta_Delta_Ct": -3.4750000000000014,
+      "Fold_Change": 11.119345758738707
+    },
+    {
+      "Sample_ID": "S001",
+      "Condition": "Control",
+      "Biological_Rep": 1,
+      "Target_Gene": "TNF",
+      "Delta_Ct": 8.330000000000002,
+      "Control_Mean_Delta_Ct": 8.506666666666666,
+      "Delta_Delta_Ct": -0.17666666666666409,
+      "Fold_Change": 1.130269389273154
+    },
+    {
+      "Sample_ID": "S002",
+      "Condition": "Control",
+      "Biological_Rep": 2,
+      "Target_Gene": "TNF",
+      "Delta_Ct": 8.574999999999996,
+      "Control_Mean_Delta_Ct": 8.506666666666666,
+      "Delta_Delta_Ct": 0.0683333333333298,
+      "Fold_Change": 0.9537391645509194
+    },
+    {
+      "Sample_ID": "S003",
+      "Condition": "Control",
+      "Biological_Rep": 3,
+      "Target_Gene": "TNF",
+      "Delta_Ct": 8.615000000000002,
+      "Control_Mean_Delta_Ct": 8.506666666666666,
+      "Delta_Delta_Ct": 0.10833333333333606,
+      "Fold_Change": 0.9276591169413078
+    },
+    {
+      "Sample_ID": "S004",
+      "Condition": "Treatment",
+      "Biological_Rep": 1,
+      "Target_Gene": "TNF",
+      "Delta_Ct": 5.849999999999998,
+      "Control_Mean_Delta_Ct": 8.506666666666666,
+      "Delta_Delta_Ct": -2.656666666666668,
+      "Fold_Change": 6.305744287833907
+    },
+    {
+      "Sample_ID": "S005",
+      "Condition": "Treatment",
+      "Biological_Rep": 2,
+      "Target_Gene": "TNF",
+      "Delta_Ct": 5.234999999999999,
+      "Control_Mean_Delta_Ct": 8.506666666666666,
+      "Delta_Delta_Ct": -3.2716666666666665,
+      "Fold_Change": 9.657613091664233
+    },
+    {
+      "Sample_ID": "S006",
+      "Condition": "Treatment",
+      "Biological_Rep": 3,
+      "Target_Gene": "TNF",
+      "Delta_Ct": 6.155000000000001,
+      "Control_Mean_Delta_Ct": 8.506666666666666,
+      "Delta_Delta_Ct": -2.351666666666665,
+      "Fold_Change": 5.104135633325425
+    }
+  ],
+  "statistical_tests": [
+    {
+      "Gene": "IL6",
+      "Comparison": "Treatment vs Control",
+      "Control_Mean": 1.029,
+      "Control_Std": 0.297,
+      "Control_N": 3,
+      "Treatment_Mean": 14.911,
+      "Treatment_Std": 4.119,
+      "Treatment_N": 3,
+      "Mean_Difference": 13.882,
+      "T_Statistic": 5.823,
+      "P_Value": 0.00433276493997293,
+      "Significant": true,
+      "Cohens_D": 4.754,
+      "Effect_Size_Interpretation": "Large",
+      "CI_Lower": 7.262,
+      "CI_Upper": 20.501,
+      "Degrees_Freedom": 4
+    },
+    {
+      "Gene": "TNF",
+      "Comparison": "Treatment vs Control",
+      "Control_Mean": 1.004,
+      "Control_Std": 0.11,
+      "Control_N": 3,
+      "Treatment_Mean": 7.022,
+      "Treatment_Std": 2.36,
+      "Treatment_N": 3,
+      "Mean_Difference": 6.019,
+      "T_Statistic": 4.413,
+      "P_Value": 0.01157660978553589,
+      "Significant": true,
+      "Cohens_D": 3.603,
+      "Effect_Size_Interpretation": "Large",
+      "CI_Lower": 2.232,
+      "CI_Upper": 9.806,
+      "Degrees_Freedom": 4
+    }
+  ]
+}
